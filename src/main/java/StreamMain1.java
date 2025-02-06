@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class StreamMain1 {
     public static void main(String[] args) {
@@ -20,8 +21,12 @@ public class StreamMain1 {
         System.out.println(number);
         System.out.println(even);
 
-        List<Integer> odd = number.stream().filter(x->x%2!=0).toList();
+        List<Integer> odd = number.stream().filter(x->x%2!=0).collect(Collectors.toList());
+
+//        List<Integer> odd = number.stream().filter(x->x%2!=0).toList();
         System.out.println(odd);
 
+        List<Integer> greater=number.stream().filter(x->x>5).collect(Collectors.toList());
+        System.out.println(greater);
     }
 }
