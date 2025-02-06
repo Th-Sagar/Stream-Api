@@ -12,7 +12,8 @@ public class StreamObject {
 
         // 1. blank
         Stream<Object> emptyStream = Stream.empty();
-//        emptyStream.forEach(e-> System.out.println(e));
+        // emptyStream.forEach(e-> System.out.println(e));
+
 
         //2 array, object, collection
         String names[] ={
@@ -24,16 +25,13 @@ public class StreamObject {
 
         Stream<String> names1 = Stream.of(names);
         names1.forEach(x-> System.out.println(x));
-
         List<Integer> list = Arrays.asList(1, 2, 3, 4);
 
         //3
         Stream<Object> build = Stream.builder().build();
 
-
         //4
         IntStream stream = Arrays.stream(new int[]{2, 4, 65, 3, 564});
-
         stream.forEach(x->
                 System.out.println(x));
 
